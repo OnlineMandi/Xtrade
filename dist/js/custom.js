@@ -13,4 +13,9 @@ $(document).ready(function(){
    backgroundPosition:bgposi,
   });
  }, 10);
+
+ $("#faq li span").click(function(){
+   $("#faq li span").next().slideUp();
+   $(this).next().slideDown();
+ })
 });
