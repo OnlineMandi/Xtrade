@@ -31,47 +31,43 @@ ul {
   padding: 0;
 }
 .top-header {
-  background: #fbfbfb none repeat scroll 0 0;
-  border-bottom: 1px solid #e8e8e8;
+  background: #000 none repeat scroll 0 0;
   padding: 10px 0;
-  border-top: 2px solid #2F89C5 ;
 }
-.top-header .left-top-list {
+.top-header .logo {
   float: left;
+  padding: 10px 0;
+  width: 180px;
 }
-.top-header .left-top-list span,
-.top-header .left-top-list a {
-  color: #707070;
-  display: inline-block;
-  margin-right: 11px;
-}
-.top-header .left-top-list span i,
-.top-header .left-top-list a i {
-  margin-right: 3px;
+.top-header .logo img {
+  width: 100%;
 }
 .top-header .right-top-list {
-  float: right;
+  margin: 6px 0;
+  text-align: right;
+  width: 100%;
 }
 .top-header .right-top-list a {
-  color: #2F89C5;
   font-weight: 600;
   margin-right: 10px;
   text-transform: capitalize;
 }
+.top-header .right-top-list span,
+.top-header .right-top-list a {
+  color: #fff;
+  display: inline-block;
+  margin-right: 11px;
+  margin-top: 8px;
+}
+.top-header .right-top-list span i,
+.top-header .right-top-list a i {
+  margin-right: 3px;
+}
 header {
-  background: #fbfbfb none repeat scroll 0 0;
-}
-header .logo {
-  float: left;
-  padding: 12px 0;
-  width: 180px;
-}
-header .logo img {
-  width: 100%;
+  background: #FEC535 none repeat scroll 0 0;
 }
 header .navi-bar {
   float: right;
-  margin-top: 20px;
   text-align: right;
 }
 header .navi-bar li {
@@ -79,16 +75,14 @@ header .navi-bar li {
   margin-left: 14px;
 }
 header .navi-bar li a {
-  border-bottom: 2px solid #fff;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 20px 12px;
   color: #000;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 12px;
 }
 header .navi-bar li a.active {
-  border-bottom: 2px solid #2F89C5;
-  color: #2F89C5;
+  color: #000;
 }
 .slide-area {
   background: transparent url("../images/slide.png") repeat scroll center center;
