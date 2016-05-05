@@ -67,22 +67,31 @@ ul{
 header{
   background: #FEC535 none repeat scroll 0 0;
   .navi-bar{
-	float: right;
+	float: left;
 	text-align: right;
 	li{
 	  display: inline-block;
-	  margin-left: 14px;
+	  margin-right: 14px;
 	  a{
 		color: #000;
 		display: inline-block;
 		font-size: 15px;
-		font-weight: 500;
+		font-weight: 600;
 		padding: 13px 12px;
 		&.active{
-		  color:#000;
+		  color: #000;
+		  background: rgb(240,175,43);
 		}
 	  }
 	}
+  }
+  .live{
+	background: rgb(240, 175, 43) none repeat scroll 0 0;
+	float: right;
+	font-size: 14px;
+	padding: 14px 16px;
+	text-transform: uppercase;
+	font-weight: 700;
   }
 }
 .slide-area{

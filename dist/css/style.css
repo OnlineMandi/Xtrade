@@ -67,22 +67,31 @@ header {
   background: #FEC535 none repeat scroll 0 0;
 }
 header .navi-bar {
-  float: right;
+  float: left;
   text-align: right;
 }
 header .navi-bar li {
   display: inline-block;
-  margin-left: 14px;
+  margin-right: 14px;
 }
 header .navi-bar li a {
   color: #000;
   display: inline-block;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 13px 12px;
 }
 header .navi-bar li a.active {
   color: #000;
+  background: #f0af2b;
+}
+header .live {
+  background: #f0af2b none repeat scroll 0 0;
+  float: right;
+  font-size: 14px;
+  padding: 14px 16px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .slide-area {
   background: transparent url("../images/slide.png") repeat scroll center center;
