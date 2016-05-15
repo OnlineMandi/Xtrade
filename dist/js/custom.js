@@ -4,6 +4,65 @@
 
 
 $(document).ready(function(){
+
+  $('form').each(function() { this.reset() });
+
+  function showpopup(popbox,popclick){
+      if($(popbox).length){
+          setTimeout(function(){
+              if($(popbox).is("#sign-popup")){
+                  $(popbox).css({
+                      display:"flex"
+                  },300);
+                  $(popbox).animate({
+                      opacity:"1"
+                  },300);
+              }
+          },4000);
+          $(popclick).on("click",function(){
+              $(popbox).css({
+                  display:"flex"
+              },300);
+              $(popbox).animate({
+                  opacity:"1"
+              },300);
+          });
+          $(popbox).on("click",function(event){
+              if($(event.target).is(popbox) || $(event.target).is(".close")){
+                  $(this).animate({
+                      opacity:"0"
+                  },300,function(){
+                      $(this).hide();
+                  });
+              }
+          });
+      }
+  }
+
+  showpopup("#sign-popup","#rg-open");
+  showpopup("#login-popup","#lg-open");
+
+
+
+
+ $('.bxslider').bxSlider({
+  auto: true,
+  autoControls: true,
+  pager:false
+ });
+
+
+ $('.clview').bxSlider({
+  auto: true,
+  autoControls: true,
+  pager:true
+ });
+
+
+ $(".bx-prev").empty().append('<i class="fa fa-angle-left"></i>');
+ $(".bx-next").empty().append('<i class="fa fa-angle-right"></i>');
+
+
  var i = 1;
  setInterval(function(){
   i--;

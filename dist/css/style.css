@@ -2,7 +2,9 @@
   background: red;
 }
 .transition,
-.main-services .main-services-item a {
+.slide-area .bx-controls-direction a,
+.main-services .main-services-item a,
+.popup .res-form button {
   transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
@@ -94,10 +96,29 @@ header .live {
   font-weight: 700;
 }
 .slide-area {
-  background: transparent url("../images/slide.png") repeat scroll center center;
-  padding: 30px 0;
   width: 100%;
-  height: 500px;
+}
+.slide-area .bx-wrapper .bx-viewport {
+  background: #eee;
+  box-shadow: 0 0 0;
+  left: 0;
+  border: 0;
+}
+.slide-area .bx-controls-direction a {
+  background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+  color: #fff;
+  font-size: 40px;
+  height: 62px;
+  text-align: center;
+  text-indent: 0;
+  width: 54px;
+}
+.slide-area .bx-controls-direction a:hover {
+  background: #fec535 none repeat scroll 0 0;
+  color: #000;
+}
+.slide-area img {
+  width: 100%;
 }
 .page-content {
   padding: 22px 0;
@@ -146,12 +167,12 @@ header .live {
   line-height: 1.7;
 }
 .page-content .colbox a {
-  color: #2f89c5;
+  color: #FEC535;
   display: inline-block;
   font-weight: 600;
 }
 .page-content .colbox a:hover {
-  color: #1E70A8;
+  color: #F0AF2B;
 }
 .ext-services {
   background: #212121 none repeat scroll 0 0;
@@ -166,23 +187,21 @@ header .live {
   color: #fff;
 }
 .ext-services .ext-services-info h2:before {
-  background: #2F89C5 none repeat scroll 0 0;
+  background: #FEC535 none repeat scroll 0 0;
 }
 .ext-services .ext-services-info p {
   color: #cfcfcf;
   line-height: 1.7;
 }
-.ext-services .ext-services-info a,
-.our-team .team-item .info-box a {
-  background: #2F89C5;
+.ext-services .ext-services-info a {
+  background: #FEC535;
   color: #fff;
   padding: 7px 16px;
   display: inline-block;
   margin-top: 10px;
 }
-.ext-services .ext-services-info a:hover,
-.our-team .team-item .info-box a:hover {
-  background: #1E70A8;
+.ext-services .ext-services-info a:hover {
+  background: #F0AF2B;
 }
 .ext-services .ext-services-list {
   display: table;
@@ -203,7 +222,7 @@ header .live {
 }
 .ext-services .ext-services-list li span i {
   align-self: center;
-  color: #2F89C5;
+  color: #FEC535;
   display: inline-block;
   font-size: 26px;
   margin: 0 auto;
@@ -217,7 +236,7 @@ header .live {
   font-size: 13px;
 }
 .ext-services .ext-services-list li a {
-  color: #2f89c5 ;
+  color: #FEC535 ;
   padding: 3px 0;
   display: inline-block;
 }
@@ -245,6 +264,15 @@ header .live {
   -webkit-user-select: none;
   -o-user-select: none;
   -ms-user-select: none;
+  position: relative;
+}
+.tradinglist ul li span:before {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
 }
 .tradinglist ul li span i {
   float: right;
@@ -268,8 +296,7 @@ header .live {
   box-shadow: 0 0 3px #bebebe;
 }
 .main-services .main-services-item:hover a {
-  background: #2F89C5;
-  color: #fff;
+  background: #FEC535;
 }
 .main-services .main-services-item img {
   width: 100%;
@@ -277,7 +304,7 @@ header .live {
 .main-services .main-services-item h4 {
   margin: 0;
   padding: 10px 14px;
-  background: #1E70A8;
+  background: #F0AF2B;
   color: #fff;
   text-align: center;
 }
@@ -303,44 +330,115 @@ header .live {
 .our-team .team-head h2:before {
   left: 50%;
   margin-left: -40px;
-  background: #2F89C5;
+  background: #FEC535;
 }
 .our-team .team-head p {
   text-align: center;
   margin-bottom: 0;
   color: #9f9f9f;
 }
-.our-team .team-item {
-  background: #fff none repeat scroll 0 0;
-  float: left;
+.our-team .testi {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
 }
-.our-team .team-item .image-box {
-  float: left;
-  margin-right: 18px;
+.our-team .testi .image-box {
+  border-radius: 132px;
+  overflow: hidden;
+  display: inline-block;
 }
-.our-team .team-item .info-box h4 {
+.our-team .testi .image-box img {
+  width: 150px;
+}
+.our-team .testi .info-box h4 {
   font-size: 24px;
-  margin: 24px 0 0;
+  margin: 8px 0 8px;
+  color: #fff;
 }
-.our-team .team-item .info-box span {
-  color: #2f89c5;
+.our-team .testi .info-box span {
+  color: #dfdfdf;
   display: inline-block;
   font-size: 13px;
-  margin-bottom: 14px;
+  margin-bottom: 17px;
   position: relative;
 }
-.our-team .team-item .info-box span:before {
-  background: red none repeat scroll 0 0;
-  bottom: -14px;
+.our-team .testi .info-box span:before {
+  background: #dfdfdf none repeat scroll 0 0;
+  bottom: -12px;
   content: "";
-  height: 2px;
+  height: 1px;
   position: absolute;
   width: 50px;
+  left: 50%;
+  margin-left: -25px;
 }
-.our-team .team-item .info-box p {
-  color: #888888;
+.our-team .testi .info-box p {
+  color: #e8e8e8;
   line-height: 1.6;
-  margin-top: 10px;
+  margin: 10px 0;
+  max-width: 740px;
+}
+.our-team .testi .info-box a {
+  color: #FEC535;
+  margin: 12px 0;
+  display: inline-flex;
+}
+.popup {
+  background: rgba(0, 0, 0, 0.9) none repeat scroll 0 0;
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+}
+.popup .res-form {
+  align-self: center;
+  background: #fff none repeat scroll 0 0;
+  border-top: 7px solid #f0af2b;
+  display: table;
+  margin: 0 auto;
+  width: 330px;
+  padding: 22px 24px 26px;
+  text-align: center;
+  position: relative;
+}
+.popup .res-form input {
+  text-align: center;
+  box-shadow: 0 0 0;
+  border: none;
+  border-radius: 0;
+  background: #eaeaea;
+}
+.popup .res-form button {
+  border: none;
+  background: #FEC535;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0;
+  padding: 7px 50px;
+}
+.popup .res-form button:hover {
+  background: #F0AF2B;
+}
+.popup .res-form h5 {
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+.popup .res-form .close {
+  background: #f0af2b none repeat scroll 0 0;
+  font-family: cursive;
+  font-size: 15px;
+  height: 20px;
+  left: 100%;
+  opacity: 1;
+  position: absolute;
+  text-shadow: 0 0 0;
+  top: 7px;
+  width: 20px;
 }
 .footer-logos {
   padding: 40px 0;
@@ -381,4 +479,15 @@ footer .logo-f img {
 .copyright span {
   color: #a3a3a3;
   font-size: 13px;
+}
+.our-team .bx-pager {
+  text-align: center !important;
+  width: 100% !important;
+}
+.our-team .bx-pager .bx-pager-item a {
+  color: red;
+}
+.our-team .bx-pager .bx-pager-item a.active,
+.our-team .bx-pager .bx-pager-item a:hover {
+  background: #FEC535;
 }
