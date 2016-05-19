@@ -39,10 +39,12 @@ $(document).ready(function(){
       }
   }
 
-  showpopup("#sign-popup","#rg-open");
-  showpopup("#login-popup","#lg-open");
+  //showpopup("#sign-popup","#rg-open");
+  //showpopup("#login-popup","#lg-open");
 
-
+    $(".navtoggle").click(function(){
+        $(".navi-bar").toggleClass("show");
+    });
 
 
  $('.bxslider').bxSlider({
