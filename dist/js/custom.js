@@ -54,6 +54,8 @@ $(document).ready(function(){
  });
 
 
+
+
  $('.clview').bxSlider({
   auto: true,
   autoControls: true,
